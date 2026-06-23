@@ -1,0 +1,194 @@
+---
+layout: 'base.html'
+description: 'ENZ Group - We offer restoration services for fire, smoke, and water damage, ranging from remodeling and interior rehabilitation to building entirely new constructions from the ground up. We are committed to our customers and dedicated to restoring their dream homes. '
+metaTitle: 'ENZ Group'
+tagTitle: ''
+preloadImg: '/images/landing-1920w.webp'
+preloadCSS: '/css/local.css'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <span class="cs-topper">ENZ Group Construction - OSHA Certified</span>
+      <p class="cs-text">
+        We offer restoration services for fire, smoke, and water damage, ranging from remodeling and interior rehabilitation to building entirely new constructions from the ground up. We are committed to our customers and dedicated to restoring their dream homes. 
+      </p>
+      <p class="cs-text">
+          Over the past few years, we have completed several multi-family housing projects throughout the tri-state area. If you're interested in collaborating on an upcoming project, feel free to reach out to us today.
+      </p>
+      </p>
+      <!-- <div class="cs-flex-group button-container">
+        <a href="/about/" class="cs-button-solid">Explore More</a>
+        <a href="/contact/" class="cs-button-solid">Free Estimate</a>
+        <button class="cs-button-solid" id="scroll-to-gallery">View Our Work</button>
+      </div> -->
+      
+      <a href="" class="cs-button-solid">Explore More</a>
+      <a href="" class="cs-button-solid">Free Quote</a>
+      <a href="#" class="cs-button-solid" id="view-work-btn">View Our Work</a>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  {% image './src/images/landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery">
+  <div class="cs-container">
+    <span class="cs-topper">Our Portfolio</span>
+    <h2 class="cs-title">Completed Projects <br></h2>
+    <div class="cs-image-group">
+      <!-- Row 1-->
+      <div class="cs-row cs-row-1">
+        {% image './src/images/portfolio/image1.jpeg', 'new hallway', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        {% image './src/images/portfolio/image2.jpeg', 'new home construction', 'cs-picture cs-picture-2', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        {% image './src/images/portfolio/image5.jpeg', 'building a new wall', 'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+      </div>
+      <!-- Row 2 -->
+      <div class="cs-row cs-row-2">
+        {% image './src/images/portfolio/image7.jpeg', 'new kitchen', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        {% image './src/images/portfolio/image0.jpeg', 'apartment addition', 'cs-picture cs-picture-2', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        {% image './src/images/portfolio/image4.jpeg', 'kew kitchen cabinets', 'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+      </div>
+      <!-- Row 3 -->
+      <!-- <div class="cs-row cs-row-3">
+        {% image './src/images/portfolio/image3.jpeg', 'new kitchen', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        {% image './src/images/portfolio/port6.jpg', 'apartment addition', 'cs-picture cs-picture-2', 'lazy', '(max-width: 600px) 200px, 400px'%}
+        {% image './src/images/portfolio/port9.jpg', 'kew kitchen cabinets', 'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%} -->
+
+        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+      </div>
+    </div>
+    <a href="/projects" class="button-solid">View More Photos</a>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+
+<!-- 
+<section id="services" class="services">
+  Get Icons From flaticon.com 
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/service1.svg"
+        alt="appliance"
+        width="48"
+        height="48"
+/> 
+    </picture>
+    <h2>Fire Damage</h2>
+  </div>
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/service2.svg"
+        alt="appliance"
+        width="48"
+        height="48"
+/>
+    </picture>
+    <h2>Smoke Damage
+    </h2>
+  </div>
+  <div class="card">
+    <picture>
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/svgs/service3.svg"
+        alt="appliance"
+        width="48"
+        height="48"
+/>
+    </picture>
+    <h2>Water Damage</h2>
+  </div>
+</section>
+
+-->
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <div class="container">
+    <h2 class="title">
+      Get It Done <br/>
+      With Us Today
+    </h2>
+    
+    <a href="/contact" class="button-solid">Get an Estimate Now</a>
+  </div>
+  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window
+      .netlifyIdentity
+      .on('init', (user) => {
+        if (!user) {
+          window
+            .netlifyIdentity
+            .on('login', () => {
+              document.location.href = '/admin/';
+            });
+        }
+      });
+  }
+</script>
+
+<script>
+  function initScrollToGallery() {
+    document.getElementById('view-work-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('gallery').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    });
+  }
+
+  // Run the function after the page has loaded
+  if (document.readyState === 'complete') {
+    initScrollToGallery();
+  } else {
+    window.addEventListener('load', initScrollToGallery);
+  }
+</script>
