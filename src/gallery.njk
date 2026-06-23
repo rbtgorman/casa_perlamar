@@ -1,0 +1,26 @@
+---
+layout: base.njk
+pageCss: gallery
+title: Gallery
+permalink: /gallery/
+---
+<section class="content-page">
+  <div class="content-container">
+    <span class="cs-topper">Gallery</span>
+    <h1 class="page-title">Inside Casa Perlamar</h1>
+    <p class="page-intro">A look around the apartment and its surroundings. Replace these with your own photos in <code>src/images/</code>.</p>
+
+    <div class="gallery-grid">
+      {% image "src/images/living-room.jpg", "Living area", "gallery-item", "lazy" %}
+      {% image "src/images/kitchen.jpg", "Kitchen", "gallery-item", "lazy" %}
+      {% image "src/images/bedroom.jpg", "Bedroom", "gallery-item", "lazy" %}
+      {% image "src/images/terrace.jpg", "Sun terrace", "gallery-item", "lazy" %}
+      {% image "src/images/sea-view.jpg", "Sea view", "gallery-item", "lazy" %}
+      {% image "src/images/pool.jpg", "Communal pool", "gallery-item", "lazy" %}
+    </div>
+
+    <div class="cs-flex-group button-container">
+      <a href="/contact/" class="cs-button-solid">Check availability</a>
+    </div>
+  </div>
+</section>

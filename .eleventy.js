@@ -77,6 +77,22 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
+  // Collections used by the Casa Perlamar pages
+  eleventyConfig.addCollection('recommendations', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('./src/recommendations/*.md');
+  });
+  eleventyConfig.addCollection('posts', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('./src/blog/*.md');
+  });
+
+  // Filter a list by a (possibly nested) key equal to a value, e.g. items | where("data.category", "Beach")
+  eleventyConfig.addFilter('where', (arr, key, value) => {
+    return (arr || []).filter((item) => {
+      const actual = String(key).split('.').reduce((obj, k) => (obj == null ? undefined : obj[k]), item);
+      return actual === value;
+    });
+  });
+
   return {
     dir: {
       input: 'src',

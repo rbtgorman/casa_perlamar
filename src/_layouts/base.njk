@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "head.njk" %}
+    <body>
+        <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+        {% include "header.njk" %}
+
+        <main id="main">
+            {{ content | safe }}
+        </main>
+
+        {% include "footer.njk" %}
+
+        <script defer src="/assets/js/nav.js"></script>
+        <script defer src="/assets/js/dark.js"></script>
+
+        <!-- Adds a .scroll class to the body after 100px for navbar scroll animations -->
+        <script defer>
+            document.addEventListener('scroll', () => {
+                const scrolled = document.documentElement.scrollTop;
+                document.querySelector('body').classList.toggle('scroll', scrolled >= 100);
+            });
+        </script>
+    </body>
+</html>

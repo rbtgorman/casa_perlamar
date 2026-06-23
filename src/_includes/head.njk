@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="keywords" content="{{ keywords or site.keywords }}">
+
+    <!-- Social Media Display -->
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}"/>
+    <meta property="og:description" content="{{ description or site.description }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta property="og:image" content="/images/hero.jpg"/>
+    <meta property="og:image:secure_url" content="/images/hero.jpg"/>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#FFBA19">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Preload fonts -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+
+    <!-- Core stylesheets (shared across every page) -->
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/critical.css">
+    <link rel="stylesheet" href="/css/pages.css">
+
+    <!-- Page-specific stylesheet(s) -->
+    {% if pageCss %}<link rel="stylesheet" href="/css/{{ pageCss }}.css">{% endif %}
+    {% for sheet in extraCss %}<link rel="stylesheet" href="/css/{{ sheet }}.css">{% endfor %}
+
+    <title>{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}{% if site.location and page.url == "/" %} | {{ site.location }}{% endif %}</title>
+</head>

@@ -1,0 +1,21 @@
+---
+layout: base.njk
+pageCss: blog
+---
+<article class="blog-post">
+    <div class="content-container">
+        <a class="back-link" href="/blog/">&larr; All posts</a>
+        <h1 class="page-title">{{ blogTitle or title }}</h1>
+        <p class="post-meta">
+            {% if author %}By {{ author }} &middot; {% endif %}
+            {% if date %}{{ date | postDate }}{% endif %}
+        </p>
+        {% if image %}
+            <img class="post-hero" src="{{ image }}" alt="{{ imageAlt or blogTitle or title }}" loading="eager" decoding="async">
+        {% endif %}
+        <div class="post-body">
+            {{ content | safe }}
+        </div>
+        <a class="back-link" href="/blog/">&larr; All posts</a>
+    </div>
+</article>
