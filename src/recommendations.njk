@@ -1,0 +1,52 @@
+---
+layout: base.njk
+pageCss: reviews
+title: Recommendations in Calpe
+permalink: /recommendations/
+---
+<section class="content-page">
+  <div class="content-container">
+    <span class="cs-topper">Recommendations</span>
+    <h1 class="page-title">Our favourite places in Calpe</h1>
+    <p class="page-intro">Hand-picked spots to eat, drink, swim and explore during your stay. These are managed in the site's content editor, so they stay up to date.</p>
+
+    {% set categories = ["Restaurant", "Beach", "Attraction", "Bar & Nightlife", "Shopping", "Day Trip"] %}
+    {% for category in categories %}
+      {% set inCategory = collections.recommendations | where("data.category", category) %}
+      {% if inCategory | length %}
+        <h2 class="section-heading">{{ category }}</h2>
+        <div class="rec-grid">
+          {% for place in inCategory %}
+            <article class="rec-card">
+              {% if place.data.image %}
+                <img class="rec-img" src="{{ place.data.image }}" alt="{{ place.data.title }}" loading="lazy" decoding="async">
+              {% endif %}
+              <div class="rec-body">
+                <h3 class="rec-title">{{ place.data.title }}</h3>
+                {% if place.data.rating %}
+                  <p class="rec-rating" aria-label="{{ place.data.rating }} out of 5">
+                    {% for i in range(0, 5) %}{% if i < place.data.rating %}&#9733;{% else %}&#9734;{% endif %}{% endfor %}
+                  </p>
+                {% endif %}
+                {% if place.data.description %}<p class="rec-desc">{{ place.data.description }}</p>{% endif %}
+                <ul class="rec-meta">
+                  {% if place.data.address %}
+                    <li>
+                      {% if place.data.mapUrl %}<a href="{{ place.data.mapUrl }}" target="_blank" rel="noopener">{{ place.data.address }}</a>
+                      {% else %}{{ place.data.address }}{% endif %}
+                    </li>
+                  {% endif %}
+                  {% if place.data.website %}<li><a href="{{ place.data.website }}" target="_blank" rel="noopener">Website</a></li>{% endif %}
+                </ul>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% if not collections.recommendations | length %}
+      <p>No recommendations yet — add some in the content editor under <strong>Recommendations</strong>.</p>
+    {% endif %}
+  </div>
+</section>

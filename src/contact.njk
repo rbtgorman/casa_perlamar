@@ -1,0 +1,39 @@
+---
+layout: base.njk
+pageCss: contact
+title: "Contact & Booking"
+permalink: /contact/
+---
+<section class="content-page">
+  <div class="content-container">
+    <span class="cs-topper">Contact</span>
+    <h1 class="page-title">Check availability &amp; book</h1>
+    <p class="page-intro">Send us your dates and a few details and we'll get back to you about availability and pricing. You can also email us directly at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+
+    <form id="cs-form" name="booking" method="post" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="booking">
+      <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+      <label class="cs-label" for="name">Name
+        <input required type="text" id="name" name="name" placeholder="Your name">
+      </label>
+      <label class="cs-label" for="email">Email
+        <input required type="email" id="email" name="email" placeholder="you@example.com">
+      </label>
+      <label class="cs-label" for="checkin">Check-in
+        <input type="date" id="checkin" name="check-in">
+      </label>
+      <label class="cs-label" for="checkout">Check-out
+        <input type="date" id="checkout" name="check-out">
+      </label>
+      <label class="cs-label" for="guests">Guests
+        <input type="number" id="guests" name="guests" min="1" max="{{ apartment.sleeps }}" placeholder="Number of guests">
+      </label>
+      <label class="cs-label cs-full" for="message">Message
+        <textarea required id="message" name="message" placeholder="Tell us a little about your trip..."></textarea>
+      </label>
+
+      <button class="cs-button-solid" type="submit">Send enquiry</button>
+    </form>
+  </div>
+</section>
