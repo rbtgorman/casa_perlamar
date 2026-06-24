@@ -267,3 +267,28 @@ body.dark-mode .wordmark { color: #fff; }
 body.dark-mode .rec-meta a,
 body.dark-mode .back-link,
 body.dark-mode .page-body a { color: var(--primaryShade); }
+
+/* ============================================================
+   Light-mode header fix
+   The CodeStitch nav floats transparently over a dark hero and
+   only turns solid on scroll. Our interior pages are white with
+   no hero, so in light mode the white links + white toggle sat
+   on white and the header looked empty until scrolling 100px.
+   (Dark mode was fine — its header bar is always solid dark.)
+   Fix: on desktop in light mode, show the solid header from the
+   top. Dark-mode + scrolled states win by specificity/order.
+   ============================================================ */
+@media only screen and (min-width: 64em) {
+  /* show the white bar immediately instead of growing it on scroll */
+  #navigation .background-color-div {
+    height: 100%;
+  }
+  /* dark links by default (matches the existing scrolled colour) */
+  #navigation #navbar-menu ul li a {
+    color: #1a1a1a;
+  }
+  /* dark moon icon so the toggle is visible on the white bar */
+  #dark-mode-toggle .moon {
+    fill: #1a1a1a;
+  }
+}
