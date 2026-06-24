@@ -1,88 +1,25 @@
 ---
-layout: "base.njk"
-title: "Gallery | Casa Perlamar"
-permalink: "/gallery/"
+layout: base.njk
+pageCss: gallery
+title: Gallery
+permalink: /gallery/
 ---
+<section class="content-page">
+  <div class="content-container">
+    <span class="cs-topper">Gallery</span>
+    <h1 class="page-title">Inside Casa Perlamar</h1>
+    <p class="page-intro">A look around the apartment and its surroundings.</p>
 
-{# Gallery Stylesheet #}
-<link rel="stylesheet" href="/css/gallery.css">
-
-<main id="main">
-    <div class="cs-container">
-        <h1 class="cs-title">Gallery</h1>
-        <p class="cs-text">Explore the comfort of our apartment and the local charm of Calpe.</p>
-
-        {# --- Living Room Section --- #}
-        <section class="cs-gallery-section">
-            <h2 class="cs-subtitle">Living & Dining Area</h2>
-            <div class="cs-gallery">
-                <div class="cs-image-wrapper">
-                     {% image "./src/images/living-room1b.jpg", "Living room seating area with sofa, TV, and natural light from the balcony", "cs-image" %}
-                </div>
-                <div class="cs-image-wrapper">
-                    {% image "./src/images/living-room1c.jpg", "Dining area featuring a custom wooden bar and seating", "cs-image" %}
-                </div>
-            </div>
-        </section>
-
-        {# --- Bedroom 1 Section --- #}
-        <section class="cs-gallery-section">
-            <h2 class="cs-subtitle">Bedroom 1 (Master)</h2>
-            <div class="cs-gallery">
-                <div class="cs-image-wrapper">
-                     {% image "./src/images/bedroom1a.jpg", "Master bedroom with double bed and patterned bedding", "cs-image" %}
-                </div>
-                <div class="cs-image-wrapper">
-                    {% image "./src/images/bedroom1b.jpg", "Master bedroom featuring a wooden headboard and a sunset painting", "cs-image" %}
-                </div>
-                <div class="cs-image-wrapper">
-                    {% image "./src/images/bedroom1c.jpg", "Alternate view of the master bedroom", "cs-image" %}
-                </div>
-            </div>
-        </section>
-
-        {# --- Bedroom 2 Section --- #}
-        <section class="cs-gallery-section">
-            <h2 class="cs-subtitle">Bedroom 2</h2>
-            <div class="cs-gallery">
-                <div class="cs-image-wrapper">
-                     {% image "./src/images/bedroom2a.jpg", "Second bedroom with a double bed and light blue ceiling", "cs-image" %}
-                </div>
-                <div class="cs-image-wrapper">
-                     {% image "./src/images/bedroom2b.jpg", "Second bedroom showing a wooden dresser and dark carved chair", "cs-image" %}
-                </div>
-            </div>
-        </section>
-        
-        {# --- Bedroom 3 Section --- #}
-        <section class="cs-gallery-section">
-            <h2 class="cs-subtitle">Bedroom 3</h2>
-            <div class="cs-gallery">
-                <div class="cs-image-wrapper">
-                     {% image "./src/images/bedroom3a.jpg", "Third bedroom featuring two single beds and colorful pop-art paintings", "cs-image" %}
-                </div>
-                <div class="cs-image-wrapper">
-                     {% image "./src/images/bedroom3b.jpg", "Alternate view of the twin beds in the third bedroom", "cs-image" %}
-                </div>
-            </div>
-        </section>
-
-        {# --- Artwork Section --- #}
-        <section class="cs-gallery-section cs-artwork-section">
-            <h2 class="cs-subtitle">Decorative Artwork</h2>
-            <p class="cs-description">Unique, locally-painted seashell artwork displayed throughout the apartment.</p>
-            <div class="cs-gallery cs-artwork-grid">
-                <div class="cs-image-wrapper cs-artwork-wrapper">
-                     {% image "./src/images/seashell1.jpg", "Decorative painted seashell depicting a traditional Spanish street scene", "cs-image cs-artwork-img" %}
-                </div>
-                <div class="cs-image-wrapper cs-artwork-wrapper">
-                     {% image "./src/images/seashell2.jpg", "Decorative painted seashell depicting two pink flamingos", "cs-image cs-artwork-img" %}
-                </div>
-                <div class="cs-image-wrapper cs-artwork-wrapper">
-                    {% image "./src/images/seashell3.jpg", "Decorative painted seashell depicting a Calpe beach scene with a starfish", "cs-image cs-artwork-img" %}
-                </div>
-            </div>
-        </section>
-
+    <div class="gallery-grid">
+      {% image "src/images/living-room.jpg", "Living area", "gallery-item", "lazy" %}
+      {% image "src/images/kitchen.jpg", "Kitchen", "gallery-item", "lazy" %}
+      {% image "src/images/bedroom.jpg", "Bedroom", "gallery-item", "lazy" %}
+      {% image "src/images/terrace.jpg", "Sun terrace", "gallery-item", "lazy" %}
+      {% image "src/images/sea-view.jpg", "Sea view", "gallery-item", "lazy" %}
     </div>
-</main>
+
+    <div class="cs-flex-group button-container">
+      <a href="/contact/" class="cs-button-solid">Check availability</a>
+    </div>
+  </div>
+</section>
