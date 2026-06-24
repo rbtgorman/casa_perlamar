@@ -239,7 +239,7 @@
   .features-grid { grid-template-columns: repeat(3, 1fr); }
   .about-photos { grid-template-columns: repeat(3, 1fr); }
   .amenities-list { grid-template-columns: repeat(2, 1fr); }
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .rec-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-list { grid-template-columns: repeat(2, 1fr); }
 }
