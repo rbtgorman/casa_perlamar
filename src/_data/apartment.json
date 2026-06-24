@@ -1,25 +1,27 @@
 {
-  "_note": "PLACEHOLDER VALUES — Robert, please correct these to match the real apartment.",
-  "bedrooms": 2,
+  "_note": "Floor: the description's header says 5th floor, but its elevator line says 3rd (a leftover from a cited source). Using 5th — Robert, please confirm.",
+  "bedrooms": 3,
   "bathrooms": 2,
-  "sleeps": 4,
-  "sizeSqm": 75,
-  "floor": "3rd floor (with elevator)",
-  "distanceToBeach": "5 minutes' walk",
+  "sleeps": 6,
+  "floor": "5th floor (with elevator)",
+  "distanceToBeach": "1-minute walk",
   "amenities": [
-    "Free high-speed WiFi",
-    "Air conditioning",
-    "Sea-view terrace",
-    "Communal swimming pool",
-    "Private parking space",
-    "Fully equipped kitchen",
+    "Full air conditioning",
+    "High-speed fibre-optic WiFi",
+    "Private terrace with sea breeze",
+    "Fully equipped kitchen (fridge, oven, microwave, stovetop, dishwasher)",
     "Washing machine",
-    "Smart TV",
-    "Elevator access",
-    "Bed linen & towels provided"
+    "TV in the living area",
+    "Two full bathrooms",
+    "Elevator access"
+  ],
+  "sleeping": [
+    { "room": "Master bedroom", "beds": "Queen-size bed" },
+    { "room": "Second bedroom", "beds": "Two single beds" },
+    { "room": "Third bedroom", "beds": "Two single beds" }
   ],
   "description": [
-    "Casa Perlamar is a light-filled two-bedroom apartment on the Costa Blanca, set just a short stroll from the golden sand of Calpe's main beach. Wake up to sea air on the private terrace, cook in a fully equipped kitchen, and cool off in the communal pool after a day in the Spanish sun.",
-    "The apartment comfortably sleeps four, with a relaxed open-plan living space, air conditioning throughout, and fast WiFi for those who like to stay connected. Whether you're here for the beaches, the Peñón de Ifach, or the tapas bars of the old town, Casa Perlamar makes an easy, comfortable base."
+    "Welcome to your perfect Mediterranean getaway. On the 5th floor of a well-maintained building in the heart of Calpe, this spacious three-bedroom, two-bathroom apartment offers the ultimate blend of coastal convenience and comfort. It sits just steps from the soft sands of Arenal-Bol Beach, so you can leave the car behind and enjoy everything Calpe has to offer on foot.",
+    "Thoughtfully laid out for up to six guests, it's ideal for families or groups of friends. A bright, open-plan living and dining area is made for relaxing after a sunny day at the beach, the fully equipped kitchen is ready for home-cooked meals, and the private terrace is the spot for morning coffee or dining alfresco in the warm evening air."
   ]
 }
