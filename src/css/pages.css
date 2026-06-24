@@ -89,12 +89,17 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   margin: 1.5rem 0 2rem;
-  align-items: start;
+  align-items: start; /* let each photo keep its own height instead of matching the tallest */
+}
+.about-photos picture,
+.about-photo {
+  display: block;
+  width: 100%;
 }
 .about-photos picture img,
 .about-photo img {
   width: 100%;
-  height: auto;
+  height: auto; /* show the full photo at its natural shape, no cropping */
   border-radius: 0.75rem;
   display: block;
 }
@@ -123,20 +128,16 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin: 1rem 0 2.5rem;
-  align-items: start;
-}
-.gallery-grid picture,
-.gallery-item {
-  display: block;
-  width: 100%;
+  margin: 2rem 0;
 }
 .gallery-grid picture img,
 .gallery-item img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 0.75rem;
   display: block;
+  aspect-ratio: 4 / 3;
 }
 
 /* ---------- Recommendation & review cards ---------- */
