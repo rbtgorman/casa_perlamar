@@ -330,4 +330,9 @@ body.dark-mode .page-body a { color: var(--primaryShade); }
   border-radius: 50%;
   background: #fff;
 }
+/* ---------- Live view section (homepage) ---------- */
+#live-view { padding: var(--sectionPadding); }
+#live-view .cs-container { max-width: 60rem; margin: auto; }
+#live-view .cs-text { max-width: 46rem; margin-bottom: 0.5rem; }
+#live-view .live-cam { margin-top: 1.5rem; }
 }
